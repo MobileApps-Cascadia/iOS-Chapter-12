@@ -17,16 +17,18 @@ class CityDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Fetch a cell of the appropriate type.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCellReuseId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableCellReuseId", for: indexPath) as! MyTableViewCell
         
-        //TODO: comment out this configuration for the default cell
-        cell.textLabel!.text = data[indexPath.row]
+        // comment out this configuration for the default cell
+        //cell.textLabel!.text = data[indexPath.row]
         
-        //TODO: Configure the custom cell’s city and state UILables' text value using the data array item
-        let item:String = data[indexPath.row] //the first item is "Seattle, WA"
+        // Configure the custom cell’s city and state UILables' text value using the data array item
+        let item:[String] = data[indexPath.row].components(separatedBy: ",") //the first item is "Seattle, WA"
         //HINT: Use the Developer Documentation window to serach for .components(separatedBy
-
-
+        
+        cell.cityLabel.text = item[0]
+        cell.stateLabel.text = item[1]
+        
         return cell
     }
     

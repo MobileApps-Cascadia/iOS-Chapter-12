@@ -23,22 +23,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCellReuseId" textLabel="TfD-kT-m8d" style="IBUITableViewCellStyleDefault" id="eSZ-UU-qB8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCellReuseId" id="eSZ-UU-qB8" customClass="MyTableViewCell" customModule="Test_TableView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSZ-UU-qB8" id="7hO-Fw-15v">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfD-kT-m8d">
-                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBl-BL-CKl">
+                                                    <rect key="frame" x="25" y="2.5" width="262" height="38.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxH-IF-u6u">
+                                                    <rect key="frame" x="295" y="-11" width="65" height="65.5"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="TVn-9z-ck0"/>
+                                                        <constraint firstAttribute="width" constant="65" id="dNw-rf-59u"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YxH-IF-u6u" firstAttribute="leading" secondItem="oBl-BL-CKl" secondAttribute="trailing" constant="8" id="F8q-Ja-DFU"/>
+                                                <constraint firstItem="YxH-IF-u6u" firstAttribute="centerY" secondItem="7hO-Fw-15v" secondAttribute="centerY" id="G75-tU-Jni"/>
+                                                <constraint firstItem="oBl-BL-CKl" firstAttribute="bottom" secondItem="7hO-Fw-15v" secondAttribute="bottomMargin" constant="8" id="X8b-sF-Mff"/>
+                                                <constraint firstItem="oBl-BL-CKl" firstAttribute="leading" secondItem="7hO-Fw-15v" secondAttribute="leadingMargin" constant="5" id="ehU-nO-ATx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YxH-IF-u6u" secondAttribute="trailing" constant="-6" id="grk-4q-8zb"/>
+                                                <constraint firstItem="oBl-BL-CKl" firstAttribute="centerY" secondItem="7hO-Fw-15v" secondAttribute="centerY" id="pL1-c7-1ls"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="oBl-BL-CKl" id="uhf-Od-IQu"/>
+                                            <outlet property="stateLabel" destination="YxH-IF-u6u" id="ZoM-k5-p5v"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
