@@ -10,7 +10,12 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell {
     //TODO: Create @IBOutlets, one for the city and one for the state UILabels
-
+  
+ 
+    @IBOutlet var CityLabel: UILabel!
+    
+    @IBOutlet var StateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // TODO: Set the adjustFontForContentSizeCategory propoerty for city and state TextViews
