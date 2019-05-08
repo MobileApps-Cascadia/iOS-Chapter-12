@@ -15,7 +15,9 @@ class MyTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // TODO: Set the adjustFontForContentSizeCategory propoerty for city and state TextViews
+        // DONE: Set the adjustFontForContentSizeCategory propoerty for city and state TextViews]
+        cityLabel.adjustsFontForContentSizeCategory = true;
+        stateLabel.adjustsFontForContentSizeCategory = true;
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
