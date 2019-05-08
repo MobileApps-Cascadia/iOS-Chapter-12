@@ -23,22 +23,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCellReuseId" textLabel="TfD-kT-m8d" style="IBUITableViewCellStyleDefault" id="eSZ-UU-qB8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCellReuseId" id="eSZ-UU-qB8" customClass="MyTableViewCell" customModule="Test_TableView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSZ-UU-qB8" id="7hO-Fw-15v">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfD-kT-m8d">
-                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcP-U4-3T3" userLabel="State">
+                                                    <rect key="frame" x="315" y="-11" width="65" height="65.5"/>
+                                                    <color key="backgroundColor" red="0.81847047809999995" green="0.37940907480000002" blue="0.21953281760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <accessibility key="accessibilityConfiguration" label="State"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="YIc-UZ-CHI"/>
+                                                        <constraint firstAttribute="width" constant="65" id="aXy-vD-F7F"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXa-cZ-g9r" userLabel="City">
+                                                    <rect key="frame" x="25" y="10.5" width="282" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LcP-U4-3T3" firstAttribute="leading" secondItem="zXa-cZ-g9r" secondAttribute="trailing" constant="8" id="LkT-xI-WVp"/>
+                                                <constraint firstAttribute="trailing" secondItem="LcP-U4-3T3" secondAttribute="trailing" constant="-6" id="Tld-xv-PCa"/>
+                                                <constraint firstItem="LcP-U4-3T3" firstAttribute="centerY" secondItem="7hO-Fw-15v" secondAttribute="centerY" id="VsB-bN-dUq"/>
+                                                <constraint firstItem="zXa-cZ-g9r" firstAttribute="centerY" secondItem="7hO-Fw-15v" secondAttribute="centerY" id="hX0-qN-tb3"/>
+                                                <constraint firstItem="zXa-cZ-g9r" firstAttribute="leading" secondItem="7hO-Fw-15v" secondAttribute="leadingMargin" constant="5" id="pUd-Cc-hPu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="city" destination="zXa-cZ-g9r" id="vbA-JU-Gbs"/>
+                                            <outlet property="state" destination="LcP-U4-3T3" id="qj7-fQ-WBT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
