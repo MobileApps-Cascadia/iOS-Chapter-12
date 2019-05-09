@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Assign the dataSource to CityDataSource to the ViewController
+        if let viewController = window?.rootViewController as? ViewController {
+            viewController.dataSource = CityDataSource()
+            
+        }
+        
         return true
     }
 

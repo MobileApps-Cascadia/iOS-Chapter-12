@@ -10,15 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var dataSource:CityDataSource!
+    var dataSource:CityDataSource!
     @IBOutlet weak var myTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.dataSource = dataSource
         
-        //TODO:  Set the MyTableView's rowHeight to UITableView.automaticDimension
+        //Set the MyTableView's rowHeight to UITableView.automaticDimension
+        myTableView.rowHeight = UITableView.automaticDimension
+        
         //        and set its estimatedRowHeight to 65
+        myTableView.estimatedRowHeight = 65
     }
 
 
