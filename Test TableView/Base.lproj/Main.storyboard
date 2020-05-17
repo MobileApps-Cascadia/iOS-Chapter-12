@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,29 +21,50 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCellReuseId" textLabel="TfD-kT-m8d" style="IBUITableViewCellStyleDefault" id="eSZ-UU-qB8">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyTableCell-Id" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableCellReuseId" id="eSZ-UU-qB8" customClass="MyTableViewCell" customModule="Test_TableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eSZ-UU-qB8" id="7hO-Fw-15v">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TfD-kT-m8d">
-                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrr-QO-3oH" userLabel="City">
+                                                    <rect key="frame" x="25" y="8" width="250" height="27"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0q-KT-cT1" userLabel="State">
+                                                    <rect key="frame" x="283" y="-11" width="65" height="65"/>
+                                                    <color key="backgroundColor" red="0.61894017270216328" green="0.72315518612576302" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="Iwy-5E-u4H"/>
+                                                        <constraint firstAttribute="height" constant="65" id="NTh-xY-99M"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q0q-KT-cT1" firstAttribute="leading" secondItem="qrr-QO-3oH" secondAttribute="trailing" constant="8" id="04G-ME-TaO"/>
+                                                <constraint firstAttribute="bottom" secondItem="qrr-QO-3oH" secondAttribute="bottom" constant="8" id="G9s-Ph-gvT"/>
+                                                <constraint firstItem="Q0q-KT-cT1" firstAttribute="centerY" secondItem="7hO-Fw-15v" secondAttribute="centerY" id="Km3-NS-ItP"/>
+                                                <constraint firstItem="qrr-QO-3oH" firstAttribute="leading" secondItem="7hO-Fw-15v" secondAttribute="leadingMargin" constant="5" id="QYL-Bi-uXQ"/>
+                                                <constraint firstItem="qrr-QO-3oH" firstAttribute="centerY" secondItem="7hO-Fw-15v" secondAttribute="centerYWithinMargins" id="TwI-NI-GfI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Q0q-KT-cT1" secondAttribute="trailing" constant="6" id="ZiB-uf-6qa"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="qrr-QO-3oH" id="bkd-ac-0NY"/>
+                                            <outlet property="stateLabel" destination="Q0q-KT-cT1" id="bOS-Cp-7PB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="list of cities from CityDataSource" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUT-vI-iHd">
                                 <rect key="frame" x="90" y="832" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -54,12 +73,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="dataSource" destination="Wyz-oO-1QY" id="qhX-nT-v7w"/>
                         <outlet property="myTableView" destination="W1E-1W-LPt" id="tQl-Lc-8qc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="Wyz-oO-1QY" userLabel="My Data Source" customClass="CityDataSource" customModule="Test_TableView" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
