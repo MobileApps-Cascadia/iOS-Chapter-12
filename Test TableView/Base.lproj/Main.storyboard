@@ -73,12 +73,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="dataSource" destination="Wyz-oO-1QY" id="qhX-nT-v7w"/>
                         <outlet property="myTableView" destination="W1E-1W-LPt" id="tQl-Lc-8qc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="Wyz-oO-1QY" userLabel="My Data Source" customClass="CityDataSource" customModule="Test_TableView" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
