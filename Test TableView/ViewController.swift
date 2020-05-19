@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.dataSource = dataSource
+        myTableView.rowHeight = UITableView.automaticDimension
+        myTableView.estimatedRowHeight = 65
         
         //TODO:  Set the MyTableView's rowHeight to UITableView.automaticDimension
         //        and set its estimatedRowHeight to 65
