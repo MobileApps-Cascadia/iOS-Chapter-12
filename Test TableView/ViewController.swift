@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var dataSource:CityDataSource!
+    var dataSource: CityDataSource!
     @IBOutlet weak var myTableView: UITableView!
 
     override func viewDidLoad() {
