@@ -1,4 +1,3 @@
-//
 //  TableViewCell.swift
 //  Test TableView
 //
@@ -10,10 +9,14 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell {
     //TODO: Create @IBOutlets, one for the city and one for the state UILabels
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // TODO: Set the adjustFontForContentSizeCategory propoerty for city and state TextViews
+        cityLabel.adjustsFontForContentSizeCategory = true
+        stateLabel.adjustsFontForContentSizeCategory = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
