@@ -10,10 +10,17 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell {
     //TODO: Create @IBOutlets, one for the city and one for the state UILabels
-
+    @IBOutlet weak var CityLabel: UILabel!
+    
+    @IBOutlet weak var StateLable: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // TODO: Set the adjustFontForContentSizeCategory propoerty for city and state TextViews
+        CityLabel.adjustsFontForContentSizeCategory = true
+        StateLable.adjustsFontForContentSizeCategory = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
