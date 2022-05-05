@@ -17,8 +17,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         myTableView.dataSource = dataSource
         
-        //TODO:  Set the MyTableView's rowHeight to UITableView.automaticDimension
-        //        and set its estimatedRowHeight to 65
+        //TODO:  Set the MyTableView's rowHeight to UITableView.automaticDimension and est to 65
+        
+        myTableView.rowHeight = UITableView.automaticDimension
+        myTableView.estimatedRowHeight = 65
+        
     }
 
 
